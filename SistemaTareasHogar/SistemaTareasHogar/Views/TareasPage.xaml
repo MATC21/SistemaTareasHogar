@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaTareasHogar.Views.TareasPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Frame BackgroundColor="#4CEE89" Padding="24" CornerRadius="0" Margin="0,0,0,20">
+                <Label Text="Lista de tareas" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <ListView x:Name="tareasListView" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="0">
+                                <Label Text="{Binding nombre}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                                <Button Text="Editar" Clicked="OnEditButtonClicked" HorizontalOptions="End"/>
+                                <Button Text="Eliminar" Clicked="OnDeleteButtonClicked" HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

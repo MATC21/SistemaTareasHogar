@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaTareasHogar.MainPage"
+             Title="Sistema de Tareas del Hogar">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Frame BackgroundColor="#F71937" Padding="24" CornerRadius="0" Margin="0,0,0,20">
+                <Label Text="Sistema de gestión de tareas del hogar" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <Button  Text="Ver Tareas" TextColor="White" BackgroundColor="#4C93EE" Clicked="btn_otraVista_Clicked"/>
+            <StackLayout Spacing="15">
+                <Label Text="Ingresa el nombre de la tarea:"/>
+                <Entry x:Name="nombre" Placeholder="Nombre de la tarea"/>
+
+                <Label Text="Descripción:"/>
+                <Editor x:Name="descripcion" HeightRequest="100" Placeholder="Descripción de la tarea"/>
+
+                <Label Text="Ingresa la hora de inicio"/>
+                <TimePicker x:Name="horaInicio"/>
+
+                <Label Text="Ingresa la hora de finalización"/>
+                <TimePicker x:Name="horaFin"/>
+            </StackLayout>
+            <Button Text="Guardar"
+                    x:Name="btn_guardar"
+                    Clicked="btn_guardar_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Margin="0,20,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
